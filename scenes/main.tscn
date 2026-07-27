@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dehyy4gsqaldu"]
+
+[ext_resource type="PackedScene" uid="uid://c8xalcy1ywxi4" path="res://scenes/player/player.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=1732402581]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=891144895]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1051574586]
+
+[node name="EnergyLabel" type="Label" parent="CanvasLayer" unique_id=1617172437]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="KnowLedgeLabel" type="Label" parent="CanvasLayer" unique_id=1901858584]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="WoodLabel" type="Label" parent="CanvasLayer" unique_id=1911910555]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=288413721]
+
+[node name="Player" parent="." unique_id=628953174 instance=ExtResource("1_o5qli")]
