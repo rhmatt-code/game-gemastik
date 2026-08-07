@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bubffe8he0n2e"]
+
+[ext_resource type="Script" uid="uid://can6oakosetg2" path="res://scenes/npc_chikawa/npc_chikawa.gd" id="1_0ykku"]
+[ext_resource type="Texture2D" uid="uid://biqjn2f3uo7uy" path="res://assets/character/chikawa.png" id="2_jh7l0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awuo3"]
+atlas = ExtResource("2_jh7l0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_307ny"]
+atlas = ExtResource("2_jh7l0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pajbr"]
+atlas = ExtResource("2_jh7l0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc1wp"]
+atlas = ExtResource("2_jh7l0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul74k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awuo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_307ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pajbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc1wp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf6aq"]
+
+[node name="NpcChikawa" type="CharacterBody2D" unique_id=1339656372]
+script = ExtResource("1_0ykku")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1145955369]
+sprite_frames = SubResource("SpriteFrames_ul74k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109534469]
+shape = SubResource("RectangleShape2D_lf6aq")

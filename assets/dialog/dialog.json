@@ -1,0 +1,135 @@
+{
+	"saling_sapa": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Selamat Pagi Pak.."
+			},
+			{
+				"speaker": "Kepala Desa",
+				"text": "Oh, halo nak selamat pagi, pagi - pagi enaknya emang jalan - jalan ya haha."
+			}
+		]
+	},
+	"interact_gudang": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Gudang ini nampak tua dan misterius. Aku penasaran dengan isinya."
+			},
+			{
+				"speaker": "Player",
+				"text": "Digembok, Apakah warga sini tau tentang gudang ini ?."
+			}
+		]
+	},
+	
+	"investigate": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Permisi.. Boleh tanya soal gudang tua terbengkalai yang ada di ujung desa itu ?"
+			},
+			{
+				"speaker": "Warga",
+				"text": "Wahhh, Soal gudang itu saya kurang tahu."
+			},
+			{
+				"speaker": "Warga",
+				"text": "Karena gudang itu sudah lama sekali terbengkalai, Coba tanya Pak Kepala Desa, Mungkin dia tahu"
+			}
+		]
+	},
+	
+	"after_investigate": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Halo pak, Maaf saya ingin bertanya soal gudang yang ada di ujung desa itu."
+			},
+			{
+				"speaker": "Player",
+				"text": "Apa memang selalu terkunci ?"
+			},
+			{
+				"speaker": "Kepala Desa",
+				"text": "Ah, Gudang itu.."
+			},
+			{
+				"speaker": "Kepala Desa",
+				"text": "Kuncinya ada di saya."
+			},
+			{
+				"speaker": "Player",
+				"text": "Apakah saya boleh meminjam kunci tersebut untuk melihat isi yang ada di dalam gudang itu pak ?"
+			},
+			{
+				"speaker": "Kepala Desa",
+				"text": "Boleh saja. Tapi... tolong bantu saya, Kucing kesayangan saya hilang sejak tadi pagi."
+			},
+			{
+				"speaker": "Kepala Desa",
+				"text": "Kalau kamu bisa menemukannya, Kunci gudang itu akan saya pinjamkan."
+			},
+		]
+	},
+	
+	"cat_found": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Oh, ternyata kamu di sini."
+			},
+			{
+				"speaker": "Player",
+				"text": "Pak Kades pasti sedang mencarimu."
+			},
+			{
+				"speaker": "Cat",
+				"text": "Meow~"
+			},
+			{
+				"speaker": "Player",
+				"text": "Ayo kita pulang."
+			}
+		]
+	},
+
+	"find_cat": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Ini kucingnya, Pak. Ketemu di dekat rumah bangunan - bangunan kosong tadi."
+			},
+			{
+				"speaker": "Kepala desa",
+				"text": "Terima kasih banyak nak!. Sesuai janji, ini kunci gudangnya."
+			}
+		]
+	},
+	"newspaper_found": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Ini sepertinya potongan koran lama..."
+			},
+			{
+				"speaker": "Player",
+				"text": "Tulisan di bagian lain hilang."
+			}
+		]
+	},
+	"newspaper_complete": {
+		"dialog": [
+			{
+				"speaker": "Player",
+				"text": "Semua potongan sudah terkumpul."
+			},
+			{
+				"speaker": "Player",
+				"text": "Kalau disusun mungkin aku bisa membaca isi beritanya."
+			}
+		]
+	}
+	
+}

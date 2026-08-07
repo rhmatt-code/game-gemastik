@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b3tafua7r3mx2"]
+
+[ext_resource type="Script" uid="uid://dgr5vvixq8lnj" path="res://scenes/newspaper/newspaper_piece.gd" id="1_l1v7e"]
+[ext_resource type="Script" uid="uid://xqbr88bf3eii" path="res://scenes/newspaper/area_2d.gd" id="2_7gc5f"]
+[ext_resource type="Texture2D" uid="uid://b88diovs1m83q" path="res://assets/item/pieces.png" id="3_rgepo"]
+[ext_resource type="Texture2D" uid="uid://ba4vs3mbisu4w" path="res://assets/icon/icon-interact.png" id="4_4up57"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fp21"]
+atlas = ExtResource("4_4up57")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2vs2"]
+atlas = ExtResource("4_4up57")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iptxc"]
+atlas = ExtResource("4_4up57")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyj7c"]
+atlas = ExtResource("4_4up57")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgmgc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fp21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2vs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iptxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyj7c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1v7e"]
+
+[node name="NewspaperPiece" type="Node2D" unique_id=901502506]
+script = ExtResource("1_l1v7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1853335819]
+modulate = Color(0.26657522, 0.2665752, 0.2665752, 0.33333334)
+position = Vector2(-2.3841858e-07, 5.9604645e-07)
+scale = Vector2(0.10869564, 0.10989011)
+texture = ExtResource("3_rgepo")
+
+[node name="InteractIcon" type="AnimatedSprite2D" parent="." unique_id=1306308702]
+position = Vector2(0, -20)
+sprite_frames = SubResource("SpriteFrames_bgmgc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1590478805]
+script = ExtResource("2_7gc5f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1766095000]
+visibility_layer = 2
+shape = SubResource("RectangleShape2D_l1v7e")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

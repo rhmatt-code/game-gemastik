@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://uxduqe7ike44"]
+
+[ext_resource type="Script" uid="uid://cw87a3di6m8b2" path="res://scenes/quest/quest_popup.gd" id="1_mii21"]
+
+[node name="QuestPopup" type="CanvasLayer" unique_id=578836765]
+script = ExtResource("1_mii21")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1928252865]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2001349515]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer" unique_id=255358737]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="PanelContainer/VBoxContainer" unique_id=879338952]
+layout_mode = 2
+
+[node name="Progress" type="Label" parent="PanelContainer/VBoxContainer" unique_id=300057540]
+layout_mode = 2

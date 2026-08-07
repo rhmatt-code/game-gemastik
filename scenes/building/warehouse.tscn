@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cor0nkfkqxjos"]
+
+[ext_resource type="Script" uid="uid://yev7xvdayt6c" path="res://scenes/building/warehouse.gd" id="1_xm3qv"]
+[ext_resource type="Texture2D" uid="uid://dg3ylfv6eu2ak" path="res://assets/building/warehouse_closed.png" id="2_7uglk"]
+[ext_resource type="Texture2D" uid="uid://bary38idskxlh" path="res://assets/icon/icon-enter.png" id="3_twh4u"]
+[ext_resource type="Texture2D" uid="uid://ba4vs3mbisu4w" path="res://assets/icon/icon-interact.png" id="4_vnrvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_choun"]
+size = Vector2(117, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg4qn"]
+atlas = ExtResource("3_twh4u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv6ic"]
+atlas = ExtResource("3_twh4u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgiuc"]
+atlas = ExtResource("3_twh4u")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxmkv"]
+atlas = ExtResource("3_twh4u")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx2wf"]
+atlas = ExtResource("4_vnrvi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyum2"]
+atlas = ExtResource("4_vnrvi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tsiu"]
+atlas = ExtResource("4_vnrvi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le87f"]
+atlas = ExtResource("4_vnrvi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_457sl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg4qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv6ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgiuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmkv")
+}],
+"loop": 1,
+"name": &"enter",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx2wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyum2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tsiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le87f")
+}],
+"loop": 1,
+"name": &"locked",
+"speed": 5.0
+}]
+
+[node name="Warehouse" type="Node2D" unique_id=866483081]
+script = ExtResource("1_xm3qv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1694631168]
+texture = ExtResource("2_7uglk")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=361998121]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=64103173]
+position = Vector2(-0.5, 48)
+shape = SubResource("RectangleShape2D_choun")
+
+[node name="InteractIcon" type="AnimatedSprite2D" parent="." unique_id=534365971]
+sprite_frames = SubResource("SpriteFrames_457sl")
+animation = &"enter"
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]

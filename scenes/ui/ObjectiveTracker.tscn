@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c6fvgdun8jrga"]
+
+[ext_resource type="Script" uid="uid://di3df4d5bjkjt" path="res://scenes/ui/objective_tracker.gd" id="1_wmitk"]
+
+[node name="ObjectiveTracker" type="CanvasLayer" unique_id=356469837]
+script = ExtResource("1_wmitk")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1922277392]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=301029806]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1559180825]
+layout_mode = 2
+
+[node name="Progress" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1584487973]
+layout_mode = 2

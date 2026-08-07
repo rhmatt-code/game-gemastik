@@ -1,0 +1,21 @@
+{
+	"chapter1_find_cat": {
+		"title": "Membantu Ketua Desa",
+		"description": "Mencari kucing yang hilang.",
+		"status": "locked"
+	},
+
+	"chapter1_berita": {
+		"title": "Potongan Berita",
+		"description": "Kumpulkan semua potongan berita yang tersebar di gudang.",
+		"status": "locked",
+		"current": 0,
+		"target": 5
+	},
+
+	"chapter1_kaset": {
+		"title": "Temukan Kaset",
+		"description": "Cari kaset misterius di gudang.",
+		"status": "locked"
+	}
+}
