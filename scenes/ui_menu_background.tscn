@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://bqxf8hs1bwwt3"]
+
+[ext_resource type="Texture2D" uid="uid://d2u5gs4gtgckm" path="res://background/Screenshot 2026-08-09 230900.png" id="1_j3yy6"]
+[ext_resource type="Texture2D" uid="uid://dhkins87s0trj" path="res://assets/cloud4.png" id="2_j3yy6"]
+[ext_resource type="Texture2D" uid="uid://b65fmaav6l571" path="res://assets/cloud.png" id="3_j3yy6"]
+[ext_resource type="PackedScene" uid="uid://cq7og0a30wxwv" path="res://animasi/pohon.tscn" id="4_6s8yq"]
+[ext_resource type="PackedScene" uid="uid://df415moxt7i1v" path="res://animasi/pakde.tscn" id="5_yrj0t"]
+[ext_resource type="PackedScene" uid="uid://bc8wb7dvb055n" path="res://animasi/ibu_2.tscn" id="6_d2qux"]
+[ext_resource type="PackedScene" uid="uid://8jcje0cwv0b5" path="res://animasi/kucing.tscn" id="7_ojlt2"]
+
+[sub_resource type="Animation" id="Animation_s5jgx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(273, 31)]
+}
+
+[sub_resource type="Animation" id="Animation_h72ow"]
+resource_name = "awan_far"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(273, 31), Vector2(-81, 31)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhgh0"]
+_data = {
+&"RESET": SubResource("Animation_s5jgx"),
+&"awan_far": SubResource("Animation_h72ow")
+}
+
+[sub_resource type="Animation" id="Animation_rgqdn"]
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30, 40),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(358.00003, -11), Vector2(-162.99992, -11), Vector2(-153.99995, -11)]
+}
+
+[sub_resource type="Animation" id="Animation_av2vc"]
+resource_name = "awan_utama"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(430, -3), Vector2(-170, -3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s5jgx"]
+_data = {
+&"RESET": SubResource("Animation_rgqdn"),
+&"awan_utama": SubResource("Animation_av2vc")
+}
+
+[node name="Background_Menu" type="Node2D" unique_id=1787956660]
+
+[node name="Screenshot20260809230900" type="Sprite2D" parent="." unique_id=1414989094]
+position = Vector2(242, 137)
+texture = ExtResource("1_j3yy6")
+
+[node name="Camera2D" type="Camera2D" parent="Screenshot20260809230900" unique_id=1844562403]
+position = Vector2(-242, -137)
+ignore_rotation = false
+enabled = false
+zoom = Vector2(2, 2)
+limit_left = 1
+limit_top = 2
+limit_right = 482
+limit_bottom = 272
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=391918845]
+modulate = Color(0.592, 0.703, 0.74, 1)
+position = Vector2(273, 31)
+scale = Vector2(2, 2)
+texture = ExtResource("2_j3yy6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D5" unique_id=1435868238]
+libraries/ = SubResource("AnimationLibrary_bhgh0")
+autoplay = &"awan_far"
+
+[node name="awan2" type="Sprite2D" parent="." unique_id=2006678842]
+modulate = Color(0.87, 0.826935, 0.7743, 1)
+position = Vector2(358.00003, -11)
+scale = Vector2(0.2760417, 0.25925928)
+texture = ExtResource("3_j3yy6")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="awan2" unique_id=618005720]
+libraries/ = SubResource("AnimationLibrary_s5jgx")
+autoplay = &"RESET"
+
+[node name="awan" type="Sprite2D" parent="." unique_id=800997932]
+position = Vector2(358.00003, -11)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_j3yy6")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="awan" unique_id=744562151]
+libraries/ = SubResource("AnimationLibrary_s5jgx")
+autoplay = &"awan_utama"
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=992189211]
+
+[node name="pohon" parent="Sprite2D3" unique_id=19403993 instance=ExtResource("4_6s8yq")]
+position = Vector2(-228, -69)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055914465]
+
+[node name="pakde" parent="Sprite2D" unique_id=71536193 instance=ExtResource("5_yrj0t")]
+position = Vector2(463, 205)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=997826190]
+
+[node name="ibu2" parent="Sprite2D2" unique_id=1421049935 instance=ExtResource("6_d2qux")]
+position = Vector2(22, 207)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=419531569]
+
+[node name="kucing" parent="." unique_id=201987822 instance=ExtResource("7_ojlt2")]
+position = Vector2(13, 186)
