@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://df415moxt7i1v"]
+
+[ext_resource type="Texture2D" uid="uid://c0fjiabx6hc8x" path="res://animate/idle pakde.png" id="1_e8xpj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlped"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_501qg"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nooao"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kar4k"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15l1p"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l8b6"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk45h"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65utu"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(224, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxwuv"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(256, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrkwk"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(288, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3ktg"]
+atlas = ExtResource("1_e8xpj")
+region = Rect2(320, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6jg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlped")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_501qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nooao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kar4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15l1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l8b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk45h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65utu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxwuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrkwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3ktg")
+}],
+"loop": 1,
+"name": &"pakde_idle",
+"speed": 10.0
+}]
+
+[node name="pakde" type="Node2D" unique_id=71536193]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=208313199]
+sprite_frames = SubResource("SpriteFrames_p6jg8")
+animation = &"pakde_idle"
+autoplay = "pakde_idle"

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bc8wb7dvb055n"]
+
+[ext_resource type="Texture2D" uid="uid://cqe4d6not4rms" path="res://animate/idle ibu2.png" id="1_n3v5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlt1k"]
+atlas = ExtResource("1_n3v5b")
+region = Rect2(0, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtelt"]
+atlas = ExtResource("1_n3v5b")
+region = Rect2(84, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c538e"]
+atlas = ExtResource("1_n3v5b")
+region = Rect2(168, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrkw3"]
+atlas = ExtResource("1_n3v5b")
+region = Rect2(252, 0, 84, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6jg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlt1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtelt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c538e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrkw3")
+}],
+"loop": 1,
+"name": &"ibu_idle",
+"speed": 4.0
+}]
+
+[node name="ibu2" type="Node2D" unique_id=1421049935]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1113602518]
+sprite_frames = SubResource("SpriteFrames_p6jg8")
+animation = &"ibu_idle"
+autoplay = "ibu_idle"
